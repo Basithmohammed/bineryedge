@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Binary Edge Tech - Gender Equality</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Font: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Typed.js -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Poppins', sans-serif; background-color: #f9f9f9; } /* Standard light background */
+    .hero {
+      background: url('cover.jpg') no-repeat center center/cover;
+    }
+  </style>
+</head>
+<body class="text-gray-800">
+
+  <!-- Hero Header with Background -->
+  <header class="hero h-[70vh] flex flex-col justify-center items-center text-white text-center relative" data-aos="fade-down">
+    <div class="absolute inset-0 bg-black/50"></div> <!-- Overlay -->
+    <div class="relative z-10">
+      <h1 class="text-5xl md:text-6xl font-bold mb-4 tracking-wide">Binary Edge Tech</h1>
+      <p class="text-xl md:text-2xl font-light">
+        <span id="typed-text"></span>
+      </p>
+    </div>
+  </header>
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md sticky top-0 z-50 border-b-2 border-orange-500">
+    <div class="max-w-6xl mx-auto flex justify-center flex-wrap space-x-4 md:space-x-6 py-3">
+      <a href="#about" class="text-gray-700 hover:text-orange-500 font-medium">About</a>
+      <a href="#vision" class="text-gray-700 hover:text-orange-500 font-medium">Vision & Mission</a>
+      <a href="#challenges" class="text-gray-700 hover:text-orange-500 font-medium">Challenges</a>
+      <a href="#gender" class="text-gray-700 hover:text-orange-500 font-medium">Gender Equality</a>
+      <a href="#roadmap" class="text-gray-700 hover:text-orange-500 font-medium">Roadmap</a>
+      <a href="#contact" class="text-gray-700 hover:text-orange-500 font-medium">Contact</a>
+    </div>
+  </nav>
+
+  <!-- About -->
+  <section id="about" class="max-w-6xl mx-auto px-6 py-16" data-aos="fade-up">
+    <h2 class="text-3xl font-bold text-indigo-900 mb-6 border-l-4 border-orange-500 pl-3">About Us</h2>
+    <div class="bg-white shadow-lg rounded-xl p-6">
+      <p><b>Industry:</b> Information Technology (IT)</p>
+      <p><b>Founded:</b> 2025</p>
+      <p><b>Headquarters:</b> Bengaluru, India</p>
+      <p><b>Specialisations:</b> Custom Software Development, Cloud Services, AI & Data Analytics, Cybersecurity, IT Consulting</p>
+    </div>
+  </section>
+
+  <!-- Vision & Mission -->
+  <section id="vision" class="bg-gray-100 py-16 px-6" data-aos="fade-right">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-indigo-900 mb-6 border-l-4 border-orange-500 pl-3">Vision & Mission</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white text-gray-800 shadow-lg rounded-xl p-6" data-aos="zoom-in">
+          <h3 class="font-semibold text-lg text-orange-500 mb-2">Vision</h3>
+          <p>To empower companies that are smart, secure, and inclusive in their digital solutions to shape the future of business and society.</p>
+        </div>
+        <div class="bg-white text-gray-800 shadow-lg rounded-xl p-6" data-aos="zoom-in">
+          <h3 class="font-semibold text-lg text-orange-500 mb-2">Mission</h3>
+          <p>To deliver world-class tech services while fostering equity, inclusion, and diversity culture, ensuring innovation flourishes through equal opportunity.</p>
+        </div>
+      </div>
+      <div class="mt-6 bg-orange-500 text-white rounded-xl p-6" data-aos="fade-up">
+        <p><b>Values:</b> Innovation, Integrity, Inclusivity, Sustainability</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Challenges -->
+  <section id="challenges" class="max-w-6xl mx-auto px-6 py-16" data-aos="fade-left">
+    <h2 class="text-3xl font-bold text-indigo-900 mb-6 border-l-4 border-orange-500 pl-3">Challenges</h2>
+    <ul class="grid md:grid-cols-2 gap-4">
+      <li class="bg-white text-gray-800 p-4 shadow rounded-lg border-l-4 border-orange-500" data-aos="flip-left">Cybersecurity threats and data breaches</li>
+      <li class="bg-white text-gray-800 p-4 shadow rounded-lg border-l-4 border-orange-500" data-aos="flip-left">Global outsourcing challenges</li>
+      <li class="bg-white text-gray-800 p-4 shadow rounded-lg border-l-4 border-orange-500" data-aos="flip-left">Workplace diversity and gender imbalance</li>
+      <li class="bg-white text-gray-800 p-4 shadow rounded-lg border-l-4 border-orange-500" data-aos="flip-left">Talent deficit in AI, cloud, cybersecurity</li>
+      <li class="bg-white text-gray-800 p-4 shadow rounded-lg border-l-4 border-orange-500" data-aos="flip-left">Work-life balance issues leading to attrition</li>
+    </ul>
+  </section>
+
+  <!-- Gender Equality -->
+  <section id="gender" class="bg-gray-100 py-16 px-6" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-indigo-900 mb-6 border-l-4 border-orange-500 pl-3">Gender Equality</h2>
+      <div class="bg-white text-gray-800 shadow-lg rounded-xl p-6">
+        <p><b>Role Model:</b> Sheryl Sandberg (Former COO, Facebook | Founder of LeanIn.Org)</p>
+        <p>Advocate for women’s leadership in technology, equal pay, and workplace reforms. Author of “Lean In.”</p>
+        <p><b>SDG 5 Relevance:</b> Women make up only 26–28% of the tech workforce globally. We aim to fix gaps in leadership, pay equity, and representation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roadmap -->
+  <section id="roadmap" class="max-w-6xl mx-auto px-6 py-16" data-aos="fade-up">
+    <h2 class="text-3xl font-bold text-indigo-900 mb-6 border-l-4 border-orange-500 pl-3">3-Year Roadmap</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-white text-gray-800 shadow-lg rounded-xl p-6 border-t-4 border-orange-500" data-aos="fade-up">
+        <h3 class="font-semibold mb-2 text-indigo-900">Year 1</h3>
+        <p>Salary audits, inclusive hiring, bias training</p>
+      </div>
+      <div class="bg-white text-gray-800 shadow-lg rounded-xl p-6 border-t-4 border-orange-500" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="font-semibold mb-2 text-indigo-900">Year 2</h3>
+        <p>Sponsorship programs, returnship initiatives, leadership development</p>
+      </div>
+      <div class="bg-white text-gray-800 shadow-lg rounded-xl p-6 border-t-4 border-orange-500" data-aos="fade-up" data-aos-delay="200">
+        <h3 class="font-semibold mb-2 text-indigo-900">Year 3</h3>
+        <p>Accountability frameworks, transparency in data, community outreach</p>
+      </div>
+    </div>
+    <div class="mt-8 bg-orange-500 text-white p-6 rounded-xl shadow" data-aos="zoom-in">
+      <h3 class="font-bold mb-2">Milestones Achieved (2023-2025)</h3>
+      <ul class="list-disc list-inside">
+        <li>Women workforce grew from 29% → 37%</li>
+        <li>Women in leadership grew from 16% → 24%</li>
+        <li>Pay gap reduced from 3.2% → 0.5%</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="bg-gray-100 py-16 px-6" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-indigo-900 mb-6 border-l-4 border-orange-500 pl-3 inline-block">Contact Us</h2>
+      <p class="mb-2">Visit our website: 
+        <a href="https://www.binaryedge.io" target="_blank" class="text-orange-500 font-semibold hover:underline">www.binaryedge.io</a>
+      </p>
+      <p class="mb-2">Email: contact@binaryedge.io</p>
+      <p>Location: Bengaluru, India</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-indigo-900 text-white text-center py-6">
+    <p>&copy; 2025 Binary Edge Tech | Gender Equality Initiative</p>
+  </footer>
+
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
+
+  <!-- Typed.js Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      new Typed("#typed-text", {
+        strings: [
+          "Empowering Smart Digital Solutions",
+          "Building Secure & Inclusive Technology",
+          "Shaping the Future of Business & Society"
+        ],
+        typeSpeed: 50,
+        backSpeed: 30,
+        backDelay: 1500,
+        loop: true
+      });
+    });
+  </script>
+
+</body>
+</html>

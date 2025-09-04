@@ -21,87 +21,76 @@
     html { scroll-behavior: smooth; }
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(270deg, #3B82F6, #1E3A8A, #2563EB, #1E40AF);
-      background-size: 800% 800%;
-      animation: gradientShift 20s ease infinite; /* animated gradient */
-      color: white;
+      background: #ffffff; /* White background for all sections */
+      color: #1E3A8A; /* Dark blue text for readability */
     }
-    @keyframes gradientShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
     .glass-card {
-      background: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(30, 58, 138, 0.05);
+      border: 1px solid rgba(30, 58, 138, 0.2);
       border-radius: 1rem;
-      color: #F1F5F9;
-      box-shadow: 0 0 20px rgba(59, 130, 246, 0.4), 0 0 30px rgba(249, 115, 22, 0.3);
+      padding: 1.5rem;
+      color: #1E3A8A;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .glass-card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 0 25px rgba(59, 130, 246, 0.6), 0 0 35px rgba(249, 115, 22, 0.5);
-    }
-    .glass-nav {
-      background: rgba(30, 58, 138, 0.8);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 2px solid #F97316;
-    }
-    .glass-footer {
-      background: rgba(30, 58, 138, 0.8);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+      box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
     }
   </style>
 </head>
 <body>
 
-  <!-- Hero Header -->
-<header class="h-[70vh] flex flex-col justify-center items-center text-white text-center" data-aos="fade-down">
-  <!-- Logo -->
-  <img src="img.jpeg" 
-       alt="Binary Edge Technologies Logo" 
-       class="w-32 md:w-40 mb-4">
+  <!-- Hero Header (Blue Background) -->
+  <header class="h-[70vh] flex flex-col justify-center items-center text-white text-center bg-blue-900" data-aos="fade-down">
+    <!-- Logo -->
+    <img src="img.jpeg" 
+         alt="Binary Edge Technologies Logo" 
+         class="w-32 md:w-40 mb-4">
 
-  <!-- Company Name -->
-  <!-- <h1 class="text-5xl md:text-6xl font-bold mb-4 tracking-wide">Binary Edge Tech</h1> -->
-  <p class="text-xl md:text-2xl font-light">
-    <span id="typed-text"></span>
-  </p>
-</header>
+    <!-- Typed Text -->
+    <p class="text-xl md:text-2xl font-light">
+      <span id="typed-text"></span>
+    </p>
+  </header>
 
-<!-- Navbar -->
-<nav class="glass-nav sticky top-0 z-50 shadow-md">
-  <div class="max-w-6xl mx-auto flex justify-between items-center px-4 py-2">
-    <!-- Logo in Navbar -->
-    <div class="flex items-center space-x-2">
-      <img src="img.jpeg" 
-           alt="Binary Edge Technologies Logo" 
-           class="w-10 h-10">
-      <span class="font-bold text-lg text-white">Binary Edge</span>
+  <!-- Responsive Navbar -->
+  <nav class="bg-blue-800 sticky top-0 z-50 shadow-md">
+    <div class="max-w-6xl mx-auto flex justify-between items-center px-4 py-3">
+      <!-- Logo -->
+      <div class="flex items-center space-x-2">
+        <img src="img.jpeg" alt="Binary Edge Logo" class="w-10 h-10">
+        <span class="font-bold text-lg text-white">Binary Edge</span>
+      </div>
+
+      <!-- Hamburger (Mobile) -->
+      <button id="menu-btn" class="md:hidden text-white focus:outline-none">☰</button>
+
+      <!-- Menu -->
+      <div id="menu" class="hidden md:flex space-x-4 md:space-x-6">
+        <a href="#about" class="text-white hover:text-orange-400 font-medium">About</a>
+        <a href="#vision" class="text-white hover:text-orange-400 font-medium">Vision & Mission</a>
+        <a href="#challenges" class="text-white hover:text-orange-400 font-medium">Challenges</a>
+        <a href="#gender" class="text-white hover:text-orange-400 font-medium">Gender Equality</a>
+        <a href="#roadmap" class="text-white hover:text-orange-400 font-medium">Roadmap</a>
+        <a href="#contact" class="text-white hover:text-orange-400 font-medium">Contact</a>
+      </div>
     </div>
 
-    <!-- Menu -->
-    <div class="flex space-x-4 md:space-x-6">
-      <a href="#about" class="text-white hover:text-orange-400 font-medium">About</a>
-      <a href="#vision" class="text-white hover:text-orange-400 font-medium">Vision & Mission</a>
-      <a href="#challenges" class="text-white hover:text-orange-400 font-medium">Challenges</a>
-      <a href="#gender" class="text-white hover:text-orange-400 font-medium">Gender Equality</a>
-      <a href="#roadmap" class="text-white hover:text-orange-400 font-medium">Roadmap</a>
-      <a href="#contact" class="text-white hover:text-orange-400 font-medium">Contact</a>
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden bg-blue-700 px-4 pb-4">
+      <a href="#about" class="block text-white py-1 hover:text-orange-400">About</a>
+      <a href="#vision" class="block text-white py-1 hover:text-orange-400">Vision & Mission</a>
+      <a href="#challenges" class="block text-white py-1 hover:text-orange-400">Challenges</a>
+      <a href="#gender" class="block text-white py-1 hover:text-orange-400">Gender Equality</a>
+      <a href="#roadmap" class="block text-white py-1 hover:text-orange-400">Roadmap</a>
+      <a href="#contact" class="block text-white py-1 hover:text-orange-400">Contact</a>
     </div>
-  </div>
-</nav>
+  </nav>
 
   <!-- About -->
-  <section id="about" class="max-w-6xl mx-auto px-6 py-16" data-aos="fade-up">
+  <section id="about" class="max-w-6xl mx-auto px-6 py-16 bg-white text-blue-900" data-aos="fade-up">
     <h2 class="text-3xl font-bold mb-6 border-l-4 border-orange-500 pl-3">About Us</h2>
-    <div class="glass-card p-6">
+    <div class="glass-card">
       <p><b>Industry:</b> Information Technology (IT)</p>
       <p><b>Founded:</b> 2025</p>
       <p><b>Headquarters:</b> Bengaluru, India</p>
@@ -110,16 +99,16 @@
   </section>
 
   <!-- Vision & Mission -->
-  <section id="vision" class="py-16 px-6" data-aos="fade-right">
+  <section id="vision" class="py-16 px-6 bg-white text-blue-900" data-aos="fade-right">
     <div class="max-w-6xl mx-auto">
       <h2 class="text-3xl font-bold mb-6 border-l-4 border-orange-500 pl-3">Vision & Mission</h2>
       <div class="grid md:grid-cols-2 gap-6">
-        <div class="glass-card p-6" data-aos="zoom-in">
-          <h3 class="font-semibold text-lg text-orange-400 mb-2">Vision</h3>
+        <div class="glass-card" data-aos="zoom-in">
+          <h3 class="font-semibold text-lg text-orange-500 mb-2">Vision</h3>
           <p>To empower companies that are smart, secure, and inclusive in their digital solutions to shape the future of business and society.</p>
         </div>
-        <div class="glass-card p-6" data-aos="zoom-in">
-          <h3 class="font-semibold text-lg text-orange-400 mb-2">Mission</h3>
+        <div class="glass-card" data-aos="zoom-in">
+          <h3 class="font-semibold text-lg text-orange-500 mb-2">Mission</h3>
           <p>To deliver world-class tech services while fostering equity, inclusion, and diversity culture, ensuring innovation flourishes through equal opportunity.</p>
         </div>
       </div>
@@ -130,30 +119,28 @@
   </section>
 
   <!-- Challenges -->
-  <section id="challenges" class="max-w-6xl mx-auto px-6 py-16" data-aos="fade-left">
+  <section id="challenges" class="max-w-6xl mx-auto px-6 py-16 bg-white text-blue-900" data-aos="fade-left">
     <h2 class="text-3xl font-bold mb-6 border-l-4 border-orange-500 pl-3">Challenges</h2>
     <ul class="grid md:grid-cols-2 gap-4">
-      <li class="glass-card p-4 border-l-4 border-orange-400" data-aos="flip-left">Cybersecurity threats and data breaches</li>
-      <li class="glass-card p-4 border-l-4 border-orange-400" data-aos="flip-left">Global outsourcing challenges</li>
-      <li class="glass-card p-4 border-l-4 border-orange-400" data-aos="flip-left">Workplace diversity and gender imbalance</li>
-      <li class="glass-card p-4 border-l-4 border-orange-400" data-aos="flip-left">Talent deficit in AI, cloud, cybersecurity</li>
-      <li class="glass-card p-4 border-l-4 border-orange-400" data-aos="flip-left">Work-life balance issues leading to attrition</li>
+      <li class="glass-card border-l-4 border-orange-500" data-aos="flip-left">Cybersecurity threats and data breaches</li>
+      <li class="glass-card border-l-4 border-orange-500" data-aos="flip-left">Global outsourcing challenges</li>
+      <li class="glass-card border-l-4 border-orange-500" data-aos="flip-left">Workplace diversity and gender imbalance</li>
+      <li class="glass-card border-l-4 border-orange-500" data-aos="flip-left">Talent deficit in AI, cloud, cybersecurity</li>
+      <li class="glass-card border-l-4 border-orange-500" data-aos="flip-left">Work-life balance issues leading to attrition</li>
     </ul>
   </section>
 
   <!-- Gender Equality -->
-  <section id="gender" class="py-16 px-6" data-aos="fade-up">
+  <section id="gender" class="py-16 px-6 bg-white text-blue-900" data-aos="fade-up">
     <div class="max-w-6xl mx-auto">
-      <h2 class="text-3xl font-bold mb-6 border-l-4 border-orange-500 pl-3">
-        Gender Equality at Binary Edge Tech
-      </h2>
-      <div class="glass-card p-6 space-y-6">
+      <h2 class="text-3xl font-bold mb-6 border-l-4 border-orange-500 pl-3">Gender Equality at Binary Edge Tech</h2>
+      <div class="glass-card space-y-6">
         <div>
-          <h3 class="text-xl font-semibold text-orange-400 mb-2">Our Commitment</h3>
+          <h3 class="text-xl font-semibold text-orange-500 mb-2">Our Commitment</h3>
           <p>At <b>Binary Edge Tech</b>, we believe that technology can only reach its fullest potential when it is built by diverse teams. Gender equality is not just a value we uphold — it is a strategic driver of innovation, problem-solving, and long-term sustainability.</p>
         </div>
         <div>
-          <h3 class="text-xl font-semibold text-orange-400 mb-2">Challenges in the IT Sector</h3>
+          <h3 class="text-xl font-semibold text-orange-500 mb-2">Challenges in the IT Sector</h3>
           <ul class="list-disc list-inside">
             <li>Low representation of women in leadership and core technical roles.</li>
             <li>Persistent gender pay gaps across the global IT industry.</li>
@@ -162,7 +149,7 @@
           </ul>
         </div>
         <div>
-          <h3 class="text-xl font-semibold text-orange-400 mb-2">What Binary Edge Tech is Doing</h3>
+          <h3 class="text-xl font-semibold text-orange-500 mb-2">What Binary Edge Tech is Doing</h3>
           <ul class="list-disc list-inside">
             <li><b>Diverse Hiring Practices</b> → Ensuring balanced representation at all levels.</li>
             <li><b>Pay Transparency</b> → Conducting regular salary audits to remove wage gaps.</li>
@@ -172,7 +159,7 @@
           </ul>
         </div>
         <div>
-          <h3 class="text-xl font-semibold text-orange-400 mb-2">Our Impact (2023–2025)</h3>
+          <h3 class="text-xl font-semibold text-orange-500 mb-2">Our Impact (2023–2025)</h3>
           <ul class="list-disc list-inside">
             <li>Increased women in our workforce from <b>29% → 37%</b>.</li>
             <li>Boosted women in leadership positions from <b>16% → 24%</b>.</li>
@@ -185,29 +172,27 @@
   </section>
 
   <!-- Roadmap -->
-  <section id="roadmap" class="max-w-6xl mx-auto px-6 py-16" data-aos="fade-up">
-    <h2 class="text-3xl font-bold mb-6 border-l-4 border-orange-500 pl-3">
-      Gender Equality Roadmap at Binary Edge Tech
-    </h2>
+  <section id="roadmap" class="max-w-6xl mx-auto px-6 py-16 bg-white text-blue-900" data-aos="fade-up">
+    <h2 class="text-3xl font-bold mb-6 border-l-4 border-orange-500 pl-3">Gender Equality Roadmap at Binary Edge Tech</h2>
     <div class="grid md:grid-cols-3 gap-6">
-      <div class="glass-card p-6 border-t-4 border-orange-400" data-aos="fade-up">
-        <h3 class="font-semibold mb-2 text-white">Year 1: Building Foundations</h3>
+      <div class="glass-card border-t-4 border-orange-500" data-aos="fade-up">
+        <h3 class="font-semibold mb-2">Year 1: Building Foundations</h3>
         <ul class="list-disc list-inside">
           <li>Conduct company-wide gender pay audits.</li>
           <li>Launch inclusive hiring practices for all departments.</li>
           <li>Introduce unconscious bias & inclusivity training.</li>
         </ul>
       </div>
-      <div class="glass-card p-6 border-t-4 border-orange-400" data-aos="fade-up" data-aos-delay="100">
-        <h3 class="font-semibold mb-2 text-white">Year 2: Driving Growth</h3>
+      <div class="glass-card border-t-4 border-orange-500" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="font-semibold mb-2">Year 2: Driving Growth</h3>
         <ul class="list-disc list-inside">
           <li>Expand <b>women-in-leadership</b> mentorship programs.</li>
           <li>Launch returnship programs for women rejoining the workforce.</li>
           <li>Provide scholarships & upskilling programs in AI, Cloud, and Cybersecurity.</li>
         </ul>
       </div>
-      <div class="glass-card p-6 border-t-4 border-orange-400" data-aos="fade-up" data-aos-delay="200">
-        <h3 class="font-semibold mb-2 text-white">Year 3: Achieving Impact</h3>
+      <div class="glass-card border-t-4 border-orange-500" data-aos="fade-up" data-aos-delay="200">
+        <h3 class="font-semibold mb-2">Year 3: Achieving Impact</h3>
         <ul class="list-disc list-inside">
           <li>Reach <b>40% women workforce representation</b>.</li>
           <li>Achieve <b>30% women in leadership positions</b>.</li>
@@ -219,19 +204,19 @@
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="py-16 px-6" data-aos="fade-up">
+  <section id="contact" class="py-16 px-6 bg-white text-blue-900" data-aos="fade-up">
     <div class="max-w-6xl mx-auto text-center">
       <h2 class="text-3xl font-bold mb-6 border-l-4 border-orange-500 pl-3 inline-block">Contact Us</h2>
       <p class="mb-2">Visit our website: 
-        <a href="https://www.binaryedge.io" target="_blank" class="text-orange-300 font-semibold hover:underline">www.binaryedge.io</a>
+        <a href="https://www.binaryedge.io" target="_blank" class="text-orange-500 font-semibold hover:underline">www.binaryedge.io</a>
       </p>
       <p class="mb-2">Email: contact@binaryedge.io</p>
       <p>Location: Bengaluru, India</p>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="glass-footer text-white text-center py-6">
+  <!-- Footer (Blue Background) -->
+  <footer class="bg-blue-900 text-white text-center py-6">
     <p>&copy; 2025 Binary Edge Tech | Gender Equality Initiative</p>
   </footer>
 
@@ -255,6 +240,12 @@
         backDelay: 1500,
         loop: true
       });
+    });
+
+    // Mobile Navbar Toggle
+    document.getElementById("menu-btn").addEventListener("click", function() {
+      const menu = document.getElementById("mobile-menu");
+      menu.classList.toggle("hidden");
     });
   </script>
 
